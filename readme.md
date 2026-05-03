@@ -174,11 +174,11 @@ Techniques:
 ---
 
 ## Run Everything
-make serve
-python eval_runner/run_eval.py
-python perf/load_test.py
-python guardrails/validate.py
-python improve/infer.py --mode improved
+ -- make serve
+ --python eval_runner/run_eval.py
+ --python perf/load_test.py
+ --python guardrails/validate.py
+ --python improve/infer.py --mode improved
 
 
 ---
