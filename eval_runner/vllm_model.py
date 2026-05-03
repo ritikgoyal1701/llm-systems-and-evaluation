@@ -8,7 +8,7 @@ MODEL = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 DETERMINISTIC = dict(
     temperature=0,
     top_p=1,
-    max_tokens=2,  # keep small for CPU
+    max_tokens=2,
 )
 
 @register_model("vllm_local")
@@ -53,8 +53,8 @@ class VLLMModel(LM):
         return hashlib.md5((prompt + str(stop)).encode()).hexdigest()
 
     def _cached_generate(self, prompt, stop):
+        prompt = prompt + "\nAnswer (ONLY A/B/C/D):"
         key = self._cache_key(prompt, stop)
-
         if key in self.cache:
             return self.cache[key]
 
@@ -96,20 +96,23 @@ class VLLMModel(LM):
         for req in requests:
             context, continuation = req.args
 
-            prompt = (context + continuation)[:150]
+            # force MCQ format
+            prompt = context + "\nAnswer (ONLY A/B/C/D):"
+
             output = self._cached_generate(prompt, stop=None)
 
+            # normalize prediction
             def extract_choice(text):
                 if not text:
                     return ""
                 token = text.strip().split()[0]
                 return token.replace(".", "").strip()
 
-
             pred = extract_choice(output)
             gold = extract_choice(continuation)
 
             score = float(pred == gold)
+
             results.append((score, True))
 
         return results
