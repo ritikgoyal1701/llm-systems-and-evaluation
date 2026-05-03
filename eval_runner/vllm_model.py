@@ -11,6 +11,7 @@ DETERMINISTIC = dict(
     max_tokens=2,
 )
 
+
 @register_model("vllm_local")
 class VLLMModel(LM):
     def __init__(self, batch_size=1, device="cpu", **kwargs):
@@ -37,7 +38,6 @@ class VLLMModel(LM):
     def batch_size(self):
         return self._batch_size
 
-
     @property
     def device(self):
         return self._device
@@ -49,27 +49,26 @@ class VLLMModel(LM):
     # ---------------------------
     # CACHING
     # ---------------------------
-    def _cache_key(self, prompt, stop):
-        return hashlib.md5((prompt + str(stop)).encode()).hexdigest()
+    def _cache_key(self, prompt):
+        return hashlib.md5(prompt.encode()).hexdigest()
 
-    def _cached_generate(self, prompt, stop):
+    def _cached_generate(self, prompt):
         prompt = prompt + "\nAnswer (ONLY A/B/C/D):"
-        key = self._cache_key(prompt, stop)
+
+        key = self._cache_key(prompt)
         if key in self.cache:
             return self.cache[key]
 
-        print(f"[MODEL CALL] Prompt snippet: {prompt[:50]}")
+        print(f"[MODEL CALL] {prompt[:60]}")
 
         response = self.client.chat.completions.create(
             model=MODEL,
             messages=[{"role": "user", "content": prompt}],
-            stop=stop,
             **DETERMINISTIC,
         )
 
-        output = response.choices[0].message.content
+        output = response.choices[0].message.content.strip()
         self.cache[key] = output
-
         return output
 
     # ---------------------------
@@ -80,15 +79,13 @@ class VLLMModel(LM):
 
         for req in requests:
             prompt = req.args[0]
-            stop = req.args[1]
-
-            output = self._cached_generate(prompt, stop)
+            output = self._cached_generate(prompt)
             results.append(output)
 
         return results
 
     # ---------------------------
-    # LOG LIKELIHOOD (approx)
+    # LOG LIKELIHOOD (MCQ FIXED)
     # ---------------------------
     def loglikelihood(self, requests):
         results = []
@@ -96,20 +93,17 @@ class VLLMModel(LM):
         for req in requests:
             context, continuation = req.args
 
-            # force MCQ format
-            prompt = context + "\nAnswer (ONLY A/B/C/D):"
+            # Generate prediction (A/B/C/D)
+            output = self._cached_generate(context)
 
-            output = self._cached_generate(prompt, stop=None)
-
-            # normalize prediction
-            def extract_choice(text):
+            def extract(text):
                 if not text:
                     return ""
                 token = text.strip().split()[0]
                 return token.replace(".", "").strip()
 
-            pred = extract_choice(output)
-            gold = extract_choice(continuation)
+            pred = extract(output)
+            gold = extract(continuation)
 
             score = float(pred == gold)
 
@@ -125,7 +119,7 @@ class VLLMModel(LM):
 
         for req in requests:
             text = req.args[0]
-            score = -len(text)  # dummy
+            score = -len(text)
             results.append(score)
 
         return results

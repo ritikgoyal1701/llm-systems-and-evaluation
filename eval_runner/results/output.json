@@ -37,7 +37,7 @@
       "fewshot_config": {
         "sampler": "default",
         "split": null,
-        "process_docs": "<function process_docs at 0x11ae50a40>",
+        "process_docs": "<function process_docs at 0x11c450a40>",
         "fewshot_indices": null,
         "samples": null,
         "doc_to_text": "{{query}}",
@@ -1099,8 +1099,8 @@
     "torch_seed": 1234,
     "fewshot_seed": 1234
   },
-  "git_hash": "d232576",
-  "date": 1777811783.425963,
+  "git_hash": "d4cef49",
+  "date": 1777813374.3474848,
   "pretty_env_info": "PyTorch version: 2.10.0\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: macOS 26.3.1 (arm64)\nGCC version: Could not collect\nClang version: 17.0.0 (clang-1700.6.4.2)\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.0 (main, Oct  7 2024, 05:02:14) [Clang 16.0.0 (clang-1600.0.26.4)] (64-bit runtime)\nPython platform: macOS-26.3.1-arm64-arm-64bit-Mach-O\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nApple M1 Pro\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] torch==2.10.0\n[pip3] torchaudio==2.11.0\n[pip3] torchvision==0.25.0\n[conda] Could not collect",
   "transformers_version": "5.7.0",
   "lm_eval_version": "0.4.11",

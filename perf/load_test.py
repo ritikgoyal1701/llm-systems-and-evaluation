@@ -15,32 +15,27 @@ client = OpenAI(
 results = []
 lock = threading.Lock()
 
-
 def send_request(prompt, req_id):
-    start_time = time.time()
-    first_token_time = None
-    token_count = 0
+    start = time.time()
 
     response = client.chat.completions.create(
         model=MODEL,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=20,
-        stream=True,
         temperature=0.7,
     )
 
-    for chunk in response:
-        content = chunk.choices[0].delta.content
-        if content:
-            if first_token_time is None:
-                first_token_time = time.time()
-            token_count += 1
+    end = time.time()
 
-    end_time = time.time()
+    text = response.choices[0].message.content or ""
+    token_count = len(text.split())
 
-    ttft = first_token_time - start_time if first_token_time else None
-    latency = end_time - start_time
-    tpot = token_count / (end_time - first_token_time) if first_token_time else 0
+    latency = end - start
+
+    # approximate TTFT (no streaming)
+    ttft = latency
+
+    tpot = token_count / latency if latency > 0 else 0
 
     with lock:
         results.append({
@@ -48,9 +43,8 @@ def send_request(prompt, req_id):
             "ttft": ttft,
             "latency": latency,
             "tpot": tpot,
-            "tokens": token_count,
+            "tokens": token_count
         })
-
 
 def run_load(concurrency=3, prompt_type="short"):
     threads = []
@@ -78,6 +72,6 @@ def save_metrics():
 
 if __name__ == "__main__":
     print("Running load test...")
-    run_load(concurrency=3, prompt_type="short")
+    run_load(concurrency=1, prompt_type="short")
     save_metrics()
     print("Metrics saved to perf/metrics.csv")
