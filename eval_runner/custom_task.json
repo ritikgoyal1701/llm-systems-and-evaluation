@@ -1,0 +1,7 @@
+[
+    {
+      "question": "What is idempotency?",
+      "choices": ["A. Repeatable without side effects", "B. Faster execution", "C. Parallel processing", "D. Load balancing"],
+      "answer": "A"
+    }
+  ]
