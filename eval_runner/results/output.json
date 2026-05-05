@@ -2,15 +2,15 @@
   "results": {
     "hellaswag": {
       "alias": "hellaswag",
-      "acc,none": 0.0,
-      "acc_stderr,none": 0.0,
-      "acc_norm,none": 0.0,
-      "acc_norm_stderr,none": 0.0
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783,
+      "acc_norm,none": 0.8,
+      "acc_norm_stderr,none": 0.19999999999999998
     },
     "mmlu_abstract_algebra": {
       "alias": "abstract_algebra",
-      "acc,none": 0.0,
-      "acc_stderr,none": 0.0
+      "acc,none": 0.6,
+      "acc_stderr,none": 0.24494897427831783
     }
   },
   "group_subtasks": {
@@ -37,7 +37,7 @@
       "fewshot_config": {
         "sampler": "default",
         "split": null,
-        "process_docs": "<function process_docs at 0x11c450a40>",
+        "process_docs": "<function process_docs at 0x11c75a700>",
         "fewshot_indices": null,
         "samples": null,
         "doc_to_text": "{{query}}",
@@ -185,45 +185,45 @@
         "resps": [
           [
             [
-              0.0,
+              -1.732306495308876,
+              false
+            ]
+          ],
+          [
+            [
+              -1.1609974056482315,
               true
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.4832868725061417,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
-            ]
-          ],
-          [
-            [
-              0.0,
-              true
+              -1.5832357555627823,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
+            -1.732306495308876,
+            false
+          ],
+          [
+            -1.1609974056482315,
             true
           ],
           [
-            0.0,
-            true
+            -1.4832868725061417,
+            false
           ],
           [
-            0.0,
-            true
-          ],
-          [
-            0.0,
-            true
+            -1.5832357555627823,
+            false
           ]
         ],
         "filter": "none",
@@ -233,7 +233,7 @@
         "doc_hash": "6cd9c6502447a6f35e13e2e94ad6a1ba2ac5672b02acd62d3f1ad2829be63827",
         "prompt_hash": "04ebc0806ad169c848f7078af1359da6f9f2c07f662e9f3cea9a94c7d54cbc7d",
         "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
-        "acc": 0.0
+        "acc": 1.0
       },
       {
         "doc_id": 1,
@@ -270,45 +270,45 @@
         "resps": [
           [
             [
-              0.0,
-              true
+              -1.5793169364333153,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.1884859427809715,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.4442203864455223,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.7936275824904442,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
-            true
+            -1.5793169364333153,
+            false
           ],
           [
-            0.0,
-            true
+            -1.1884859427809715,
+            false
           ],
           [
-            0.0,
-            true
+            -1.4442203864455223,
+            false
           ],
           [
-            0.0,
-            true
+            -1.7936275824904442,
+            false
           ]
         ],
         "filter": "none",
@@ -355,45 +355,45 @@
         "resps": [
           [
             [
-              0.0,
+              -1.5511641949415207,
+              false
+            ]
+          ],
+          [
+            [
+              -1.2097402065992355,
               true
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.598356768488884,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
-            ]
-          ],
-          [
-            [
-              0.0,
-              true
+              -1.7218938320875168,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
+            -1.5511641949415207,
+            false
+          ],
+          [
+            -1.2097402065992355,
             true
           ],
           [
-            0.0,
-            true
+            -1.598356768488884,
+            false
           ],
           [
-            0.0,
-            true
-          ],
-          [
-            0.0,
-            true
+            -1.7218938320875168,
+            false
           ]
         ],
         "filter": "none",
@@ -440,45 +440,45 @@
         "resps": [
           [
             [
-              0.0,
+              -2.1393246948719025,
+              false
+            ]
+          ],
+          [
+            [
+              -1.5391440689563751,
               true
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.6277604401111603,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
-            ]
-          ],
-          [
-            [
-              0.0,
-              true
+              -2.0150714218616486,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
+            -2.1393246948719025,
+            false
+          ],
+          [
+            -1.5391440689563751,
             true
           ],
           [
-            0.0,
-            true
+            -1.6277604401111603,
+            false
           ],
           [
-            0.0,
-            true
-          ],
-          [
-            0.0,
-            true
+            -2.0150714218616486,
+            false
           ]
         ],
         "filter": "none",
@@ -488,7 +488,7 @@
         "doc_hash": "507f70f31a83f1eaa02654118ef13a49c0ed0e20461c3f935783dea3308fb831",
         "prompt_hash": "dbb7897bfb30fa6f2d96be6e62c6c44f5ca0793f2ee8c7a33e47b95622b04e81",
         "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
-        "acc": 0.0
+        "acc": 1.0
       },
       {
         "doc_id": 4,
@@ -525,45 +525,45 @@
         "resps": [
           [
             [
-              0.0,
+              -1.6201219484210014,
+              false
+            ]
+          ],
+          [
+            [
+              -1.2429132387042046,
               true
             ]
           ],
           [
             [
-              0.0,
-              true
+              -1.6814479753375053,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
-            ]
-          ],
-          [
-            [
-              0.0,
-              true
+              -1.6788406297564507,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
+            -1.6201219484210014,
+            false
+          ],
+          [
+            -1.2429132387042046,
             true
           ],
           [
-            0.0,
-            true
+            -1.6814479753375053,
+            false
           ],
           [
-            0.0,
-            true
-          ],
-          [
-            0.0,
-            true
+            -1.6788406297564507,
+            false
           ]
         ],
         "filter": "none",
@@ -573,7 +573,7 @@
         "doc_hash": "6052136314d811e87b28615c67e27b8bd4c0d96c342921da4d866866b90d4fe2",
         "prompt_hash": "5536e9f73a1a014e7bcbfe68e122d061cdd352faf5dbda3a453ed6cc644f8072",
         "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
-        "acc": 0.0
+        "acc": 1.0
       }
     ],
     "hellaswag": [
@@ -626,45 +626,45 @@
         "resps": [
           [
             [
-              0.0,
-              true
+              -46.59818809200078,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -33.16848877817392,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -27.65227279951796,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -29.653058528900146,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
-            true
+            -46.59818809200078,
+            false
           ],
           [
-            0.0,
-            true
+            -33.16848877817392,
+            false
           ],
           [
-            0.0,
-            true
+            -27.65227279951796,
+            false
           ],
           [
-            0.0,
-            true
+            -29.653058528900146,
+            false
           ]
         ],
         "filter": "none",
@@ -676,7 +676,7 @@
         "prompt_hash": "e63087504993cd36ee0de69dc9b1ab25ac86550530f0b38fd17b14d3c4cf4f38",
         "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
         "acc": 0.0,
-        "acc_norm": 0.0
+        "acc_norm": 1.0
       },
       {
         "doc_id": 1,
@@ -727,45 +727,45 @@
         "resps": [
           [
             [
-              0.0,
-              true
+              -33.21553588286042,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -21.085056652897038,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -27.558151138597168,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -17.67494257639919,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
-            true
+            -33.21553588286042,
+            false
           ],
           [
-            0.0,
-            true
+            -21.085056652897038,
+            false
           ],
           [
-            0.0,
-            true
+            -27.558151138597168,
+            false
           ],
           [
-            0.0,
-            true
+            -17.67494257639919,
+            false
           ]
         ],
         "filter": "none",
@@ -776,8 +776,8 @@
         "doc_hash": "08296d87a2d1cb270a714773cb78d37f02f82661a082462fa53b437dfa0e3a5e",
         "prompt_hash": "3b9f9052a08d02c8e1569c3193b21da7a40a88d23a03431937a57658ccfbd8e3",
         "target_hash": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
-        "acc": 0.0,
-        "acc_norm": 0.0
+        "acc": 1.0,
+        "acc_norm": 1.0
       },
       {
         "doc_id": 2,
@@ -828,45 +828,45 @@
         "resps": [
           [
             [
-              0.0,
-              true
+              -38.27653474287945,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -54.578633710043505,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -17.635436143376864,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -106.28833125828533,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
-            true
+            -38.27653474287945,
+            false
           ],
           [
-            0.0,
-            true
+            -54.578633710043505,
+            false
           ],
           [
-            0.0,
-            true
+            -17.635436143376864,
+            false
           ],
           [
-            0.0,
-            true
+            -106.28833125828533,
+            false
           ]
         ],
         "filter": "none",
@@ -877,8 +877,8 @@
         "doc_hash": "14dc9b1c3f03ef369e0e9976562d362f58e37cadb9bebf25ee5dabdc3ff6ad7d",
         "prompt_hash": "fe85f7beb5549c53ae662741c373d9e854aa42fc4c070ba4503a0ded863f2dfe",
         "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
-        "acc": 0.0,
-        "acc_norm": 0.0
+        "acc": 1.0,
+        "acc_norm": 1.0
       },
       {
         "doc_id": 3,
@@ -929,45 +929,45 @@
         "resps": [
           [
             [
-              0.0,
-              true
+              -16.330623269081116,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -31.71754789352417,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -29.949620575731387,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -27.08847621269524,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
-            true
+            -16.330623269081116,
+            false
           ],
           [
-            0.0,
-            true
+            -31.71754789352417,
+            false
           ],
           [
-            0.0,
-            true
+            -29.949620575731387,
+            false
           ],
           [
-            0.0,
-            true
+            -27.08847621269524,
+            false
           ]
         ],
         "filter": "none",
@@ -979,7 +979,7 @@
         "prompt_hash": "a2df73697ab4570dea4ab99211b81e98edfa0a5615a9b83a38f48341c0734e80",
         "target_hash": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
         "acc": 0.0,
-        "acc_norm": 0.0
+        "acc_norm": 1.0
       },
       {
         "doc_id": 4,
@@ -1030,45 +1030,45 @@
         "resps": [
           [
             [
-              0.0,
-              true
+              -22.812503933906555,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -11.999926418066025,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -17.946524865925312,
+              false
             ]
           ],
           [
             [
-              0.0,
-              true
+              -18.81689496047329,
+              false
             ]
           ]
         ],
         "filtered_resps": [
           [
-            0.0,
-            true
+            -22.812503933906555,
+            false
           ],
           [
-            0.0,
-            true
+            -11.999926418066025,
+            false
           ],
           [
-            0.0,
-            true
+            -17.946524865925312,
+            false
           ],
           [
-            0.0,
-            true
+            -18.81689496047329,
+            false
           ]
         ],
         "filter": "none",
@@ -1079,7 +1079,7 @@
         "doc_hash": "0ea20e56c00cb5efbd1db09b523ddfb3dca721b1e17d740270d39d0296ee621c",
         "prompt_hash": "8a1432f2aa0f0a07e3c133ac5c43561fc3849ada1e1c45066a6f13aa4ccac951",
         "target_hash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
-        "acc": 0.0,
+        "acc": 1.0,
         "acc_norm": 0.0
       }
     ]
@@ -1099,8 +1099,8 @@
     "torch_seed": 1234,
     "fewshot_seed": 1234
   },
-  "git_hash": "d4cef49",
-  "date": 1777813374.3474848,
+  "git_hash": "e77ad3b",
+  "date": 1777956088.471245,
   "pretty_env_info": "PyTorch version: 2.10.0\nIs debug build: False\nCUDA used to build PyTorch: None\nROCM used to build PyTorch: N/A\n\nOS: macOS 26.3.1 (arm64)\nGCC version: Could not collect\nClang version: 17.0.0 (clang-1700.6.4.2)\nCMake version: Could not collect\nLibc version: N/A\n\nPython version: 3.13.0 (main, Oct  7 2024, 05:02:14) [Clang 16.0.0 (clang-1600.0.26.4)] (64-bit runtime)\nPython platform: macOS-26.3.1-arm64-arm-64bit-Mach-O\nIs CUDA available: False\nCUDA runtime version: No CUDA\nCUDA_MODULE_LOADING set to: N/A\nGPU models and configuration: No CUDA\nNvidia driver version: No CUDA\ncuDNN version: No CUDA\nIs XPU available: False\nHIP runtime version: N/A\nMIOpen runtime version: N/A\nIs XNNPACK available: True\nCaching allocator config: N/A\n\nCPU:\nApple M1 Pro\n\nVersions of relevant libraries:\n[pip3] numpy==2.2.6\n[pip3] torch==2.10.0\n[pip3] torchaudio==2.11.0\n[pip3] torchvision==0.25.0\n[conda] Could not collect",
   "transformers_version": "5.7.0",
   "lm_eval_version": "0.4.11",
