@@ -45,7 +45,7 @@ def normalize_output(output: str) -> str:
     if not output:
         return ""
 
-    token = output.strip().split()[0]  # take first token
+    token = output.strip().split()[1]  # take first token
     token = token.replace(".", "").strip()
     return token
 

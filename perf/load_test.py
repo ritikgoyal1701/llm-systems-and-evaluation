@@ -72,6 +72,6 @@ def save_metrics():
 
 if __name__ == "__main__":
     print("Running load test...")
-    run_load(concurrency=1, prompt_type="short")
+    run_load(concurrency=5, prompt_type="short")
     save_metrics()
     print("Metrics saved to perf/metrics.csv")
